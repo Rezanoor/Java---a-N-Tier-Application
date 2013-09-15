@@ -1,0 +1,39 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+import java.net.*;
+import java.io.*;
+import java.sql.*;
+
+
+
+
+/**
+ *
+ * @author Reza Nourbakhsh
+ */
+public class StudentServer {
+
+    public static void main(String args[]) throws Exception
+    {
+
+        Thread t1 = new Thread() {
+            public void run() {
+                Contact Con = new Contact();
+                Con.ServerProcess();
+            }
+        };
+
+        t1.start();
+
+    }
+}
+
+
+
+
+
+
